@@ -1,7 +1,7 @@
 const paintings = [
     {
         image: "Religious Paintings/1.jpeg",
-        title: "Flames of Freedom",
+        title: "Sakoon e Qalb",
         description: "This artwork features a modern and elegant form of Arabic calligraphy, presented on a soft  background that adds warmth and subtle sophistication. The dark calligraphic strokes create a strong contrast, making the design visually striking while maintaining a minimal and balanced composition.The brushwork appears expressive yet controlled, with smooth, flowing lines combined with slightly textured strokes that give the piece a handcrafted and authentic feel. Fine detailing and variation in line thickness enhance the beauty of the script, showing precision and artistic skill.The overall composition conveys a sense of calmness, reflection, and gentle spirituality. The simplicity of the background, combined with the bold calligraphy, creates a harmonious balance between modern aesthetics and traditional artistic expression.This painting reflects clean craftsmanship, thoughtful design, and emotional depth, making it both visually appealing and meaningful as a decorative piece.",
         price: "PKR 10,000",
         artist: "Sabeen Sarfaraz",
