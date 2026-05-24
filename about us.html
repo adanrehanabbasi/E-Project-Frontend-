@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Galleria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Custom CSS for the About Us page */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .about-section {
+            padding: 60px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-member h5 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styling */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        .nav-links li {
+            padding: 0 15px;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #b8860b;
+        }
+
+        /* Toggle Button */
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Mobile Responsive */
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links li {
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            #menu-toggle:checked~.nav-links {
+                display: flex;
+            }
+        }
+
+        body {
+            font-family: Poppins;
+            background: #f9f9f9;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .btn-dark {
+            background: #b8860b;
+            color: #fff;
+            border: none;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .container h1 {
+            font-weight: bolder;
+        }
+
+        .container p {
+            font-size: large;
+        }
+
+        .card p {
+            height: 60px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+
+            font-size: 14px;
+            color: #696969;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://avatars.mds.yandex.net/i?id=bb2087d41626ae1c04280229f9b008b251bbe07a-5318713-images-thumbs&n=13') center/cover;
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .about-hero h1 {
+            font-size: 65px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-hero p {
+            font-size: 18px;
+            width: 70%;
+            margin: 15px auto 0;
+        }
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about-section {
+            padding: 90px 0;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-content h2 {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-content p {
+            color: #666;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .btn  {
+            background: #b8860b;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #222;
+            color:#fff;
+
+        }
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .feature-box {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box i {
+            font-size: 45px;
+            color: #b8860b;
+            margin-bottom: 20px;
+        }
+
+        .feature-box h4 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+
+        .footer-section-main {
+            background: #111827;
+            color: #ddd;
+            padding: 70px 0 20px;
+        }
+
+        .footer-logo {
+            color: #b8860b;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #b1b1b1;
+            font-size: medium;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffcf6e;
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #1f2937;
+            color: #fff;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .social-icons a:hover {
+            background: #c89b3c;
+            transform: translateY(-4px);
+        }
+
+        .footer-line {
+            border-color: #374151;
+            margin: 40px 0 20px;
+        }
+
+        .footer-bottom {
+            color: #aaa;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo1.jpg" alt="Galleria Logo" class="logo">
+            <span class="brand-name">Galleria</span>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"></label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about-section" class="active">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Paintings.html">Paintings</a></li>
+            <li><a href="Customization.html">Custom Orders</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-hero">
+        <div>
+            <h1>About Galleria </h1>
+            <p>Bringing creativity, luxury and artistic passion together through premium paintings and modern wall art.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://i.pinimg.com/1200x/ba/6f/25/ba6f25ce056572ac574400cead586d8c.jpg"
+                            alt="About Galleria">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2>We Create Art With Passion</h2>
+                        <p>Galleria is a premium online art gallery dedicated to showcasing modern, abstract, landscape
+                            and luxury paintings. Our mission is to bring creativity into every home and workspace
+                            through timeless artistic masterpieces.</p>
+                        <p>Each artwork is carefully selected to inspire elegance, emotion and imagination. We believe
+                            that art has the power to transform spaces and create unforgettable experiences.</p>
+                        <a href="gallery.html" class="btn custom-btn mt-3">Explore Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="feature-box">
+                        <i class="bi bi-palette-fill"></i>
+                        <h4>Premium Art</h4>
+                        <p>Discover handcrafted paintings designed with elegance and creativity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-box">
+                        <i class="bi bi-brush-fill"></i>
+                        <h4>Handmade Designs</h4>
+                        <p>Every artwork is uniquely crafted with passion and artistic excellence.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-box">
+                        <i class="bi bi-globe"></i>
+                        <h4>Worldwide Delivery</h4>
+                        <p>Delivering luxury paintings and wall art collections around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="detailPage" class="page">
+        <button class="btn btn-secondary mb-3" onclick="goBack()">← Back</button>
+        <div id="detailBox"></div>
+    </div>
+
+    <footer class="footer-section-main" id="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h2 class="footer-logo">Galleria</h2>
+                    <p>Premium online art gallery offering modern, abstract, landscape and customized paintings
+                        worldwide.</p>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about-section">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="Paintings.html">Paintings</a></li>
+                        <li><a href="Customization.html">Custom Orders</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="AbstractPaintings.html">Abstract</a></li>
+                        <li><a href="LandscapePaintings.html">Landscape</a></li>
+                        <li><a href="FlowerPaintings.html">Flowers</a></li>
+                        <li><a href="FigurativePaintings.html">Figurative</a></li>
+                        <li><a href="ReligiousPaintings.html">Religious</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5>Contact Links</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                    <p class="mt-3">Karachi, Pakistan</p>
+                </div>
+            </div>
+
+            <hr class="footer-line">
+            <div class="text-center footer-bottom">
+                © 2026 Galleria | Designed with Creativity & Elegance
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
